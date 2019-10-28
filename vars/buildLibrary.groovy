@@ -1,6 +1,6 @@
 def call() {   
    log.info 'LIBRARY FORGE'
    def nextTag = prepareVersion()
-   validate()
+   // validate()
    deploy(nextTag)
 }
