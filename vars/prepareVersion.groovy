@@ -2,7 +2,7 @@ def call() {
     log.info "PREPARE VERSION"
     stage('prepare') {
         milestone()
-        def pom = readMavenPom file: 'pom.xml'
+        def pom = readMavenPom file: "pom.xml"
         log.info "VERSOPM ${pom.version}"
         def contractVersion = pom.version.split(".999")[0]
         def tagPrefix = "${pom.artifactId}-${contractVersion}"
