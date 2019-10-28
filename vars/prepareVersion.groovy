@@ -1,4 +1,5 @@
 def call() {
+    log.info "PREPARE VERSION"
     stage('prepare') {
         milestone()
         def pom = readMavenPom file: 'pom.xml'
