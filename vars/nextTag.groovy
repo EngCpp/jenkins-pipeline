@@ -1,4 +1,5 @@
 def call(tagPrefix) {
+    log.info "NEXT TAG"
     log.info "Find the next tag matching ${tagPrefix}"
     def largestContractTag = sh (
         script: "git tag --list '${tagPrefix}.*' | sort  -t '.' -k1,1 -k2,2 -k3,3 -g | tail -n 1",
