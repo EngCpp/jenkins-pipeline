@@ -1,4 +1,6 @@
-def call(cascades = []) {
+def call(cascades = []) {	
+  log.info 'CASCADE'
+	
   stage('cascade') {
     for (String cascade : cascades) {
       try {
