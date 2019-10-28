@@ -2,6 +2,7 @@ def call() {
     log.info "PREPARE VERSION"
     stage('prepare') {
         milestone()
+        log.info "READING POM"
         def pom = readMavenPom file: "pom.xml"
         log.info "VERSOPM ${pom.version}"
         def contractVersion = pom.version.split(".999")[0]
