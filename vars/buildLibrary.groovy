@@ -3,6 +3,6 @@ def call() {
    node {
       def nextTag = prepareVersion()
       // validate()
-      deploy(nextTag)
+      // deploy(nextTag)
    }
 }
