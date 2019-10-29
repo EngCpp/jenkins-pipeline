@@ -1,5 +1,5 @@
 def call(pom) {
-    log.info "GROUP ID"
+    log.info "GROUP ID - BRANCH: ${env.BRANCH_NAME}"
     
     if (env.BRANCH_NAME.startsWith('master'))
         return pom.groupId.replace(".unstable.",".stable.")
