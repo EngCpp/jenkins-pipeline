@@ -21,7 +21,7 @@ def call() {
 
             return nextTag
         } catch (Exception e) {
-            log.info "ERROR: ${e}"
+            log.info "ERROR - ${e}"
             throw e;
         }        
     }
