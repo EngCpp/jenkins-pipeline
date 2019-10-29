@@ -7,9 +7,9 @@ def call(cascades = []) {
       try {
         def breakout = cascade.tokenize('/')
         if (breakout[1]) {
-	    build job "${breakout[0]}/${breakout[1]}", wait: false
+	    build job: "${breakout[0]}", wait: false
         } else {
-	    build job "${cascade}", wait: false
+	    build job: "${cascade}", wait: false
         }
       } catch (failure) {
 	log.info "${failure}"
