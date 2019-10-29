@@ -8,8 +8,7 @@ def call() {
             log.info "VERSION ${pom.version}"
             def contractVersion = pom.version.split(".999")[0]
             def tagPrefix = "${pom.artifactId}-${contractVersion}"
-
-            //log.info "From ${pom.version} on ${env.BRANCH_NAME} we have prefix ${tagPrefix}"
+            log.info "From ${pom.version} on ${env.BRANCH_NAME} we have prefix ${tagPrefix}"
             def nextTag = nextTag(tagPrefix)
             pom.version = nextTag.tokenize('-').last() 
 
