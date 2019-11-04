@@ -4,6 +4,6 @@ def call() {
       checkoutWithTags()
       def nextTag = prepareVersion()
       // validate()
-      // deploy(nextTag)
+      deploy(nextTag)
    }
 }
